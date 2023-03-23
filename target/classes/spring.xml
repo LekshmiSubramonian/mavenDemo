@@ -9,27 +9,56 @@ whenever custom tags are used it should be defined
 
 
 <!-- defining beans custom tag -->
-<beans
-xmlns="http://www.springframework.org/schema/beans"
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
-  xsi:schemaLocation="http://www.springframework.org/schema/beans 
-  http://www.springframework.org/schema/beans/spring-beans.xsd 
-  http://www.springframework.org/schema/context/ 
-  http://www.springframework.org/schema/context/spring-context.xsd"
-  >
+<beans xmlns = "http://www.springframework.org/schema/beans"
+   xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation = "http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
 		
 		<!-- using annotation based configuration -->
 		<!-- specify the base package -->
 		
-		<context:component-scan base-package="com.sample.mavenDemo" /> 
+	<!--  	<context:component-scan base-package="com.sample.mavenDemo" /> -->
+	
+	
+	
+	
 				
-		<!-- using xml based configuration -->
-		
+		<!-- using xml based configuration -->	
 		<!--  defining bean (getBean)-->
 		<!-- id should be same as mentioned in app.java -->
 		<!-- include the class from which the method to be called -->
 		
-		<!--  <bean id="vehicle" class="com.sample.mavenDemo.Bike"></bean>-->
+		 <!--   <bean id="vehicle" class="com.sample.mavenDemo.Bike"></bean> -->
+		 
+		 
+		 
+		 
+		 
+		 
+		 <!-- using java configuration -->
+		 
+		   
+		<bean id="tyre" class="com.sample.mavenDemo.Tyre">
+			<!-- Setter Injection -->
+			<!-- property tag is used for setter injection -->
+			<!--  <property name="brand" value="MRF"></property> -->
+			
+			
+			
+			<!-- Constructor Injection -->
+		 	<constructor-arg value="Ceat"></constructor-arg>
+		</bean> 
+		
+		 
+		 
+		 
+		
+		 
+		 
+		 
+		 
+		 
 		
 		
 
